@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --head-font-size: clamp(1.30rem, 0.90rem + 1.99vw, 2.40rem);
+    --font-size: clamp(1.50rem, 1.14rem + 1.82vw, 2.50rem);
+    --footer-font-size: clamp(0.43rem, 0.07rem + 1.83vw, 1.44rem);
+}
+
+header {
+    padding-top: 1rem;
+    text-align: center;
+    font-size: var(--head-font-size);
+}
+
+main {
+    margin-top: calc(10% + 2rem);
+    height: 50vh;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'colorname'
+    'button';
+    row-gap: calc(2% + 0.2rem);
+    height: (40% + 2rem);
+    padding-bottom: calc(2% + 0.01rem);
+    background-color: hsl(0, 0%, 50%);
+    color: white;
+}
+
+.bg_color {
+    grid-area: colorname;
+    margin: auto;
+}
+
+.colorchanger {
+    grid-area: button;
+    margin: auto;
+}
+
+.bg_color p {
+    font-size: var(--font-size);
+    padding-top:calc(10% + 0.2rem) ;
+}
+
+.colorchanger #btn{
+    background: none;
+    color: white;
+    border: 0.02em solid white;
+    padding: calc(2% + 0.4rem);
+    font-size: var(--font-size);
+    width: 100%;
+    margin: auto;
+}
+
+#color_manipulation {
+    font-size: var(--font-size);
+    text-align: center;
+    background-color: hsl(0, 0%, 48%);
+}
+
+#color_manipulation .color_add { 
+    margin-top: calc(2% + 0.2em);
+}
+
+#color_manipulation input {
+    width: 40%;
+}
+
+input[type ='text'], .addbtn {
+    padding: calc(0.05% + 0.02rem);
+    font-size: var(--font-size);
+    background: none;
+    color: white;
+    border: 0.02em solid white;
+}
+
+input[type ='text'] {
+    border: none;
+    border-bottom: 0.02em solid white;
+}
+
+.addbtn:hover, #btn:hover {
+    cursor: pointer;
+    border-color: hsl(60, 100%, 57%);
+
+}
+
+::placeholder {
+    color: white;
+    text-align: center;
+    opacity: 0.4;
+}
+
+/*            footer                         */
+footer {
+    text-align: center;
+    font-size: var(--footer-font-size);
+    font-weight: 600;
+    width: 100%;
+    margin-top: calc(10% + 0.5rem);
+}
+
+.copyright_container {
+    padding-bottom: 0.2vh;
+    border-bottom: 0.09rem solid black;
+}
+
+.author {
+    padding-top: 0.5vh;
+}
+
+@media screen and (max-width: 508px) {
+    .color_add {
+        display: grid;
+        row-gap: 0.2em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'label'
+        'button';
+    }
+
+    label {
+        grid-area: label;
+        width: 100%;
+    }
+
+    .addbtn {
+        margin-top: calc(2% + 0.2em);
+        grid-area: button;
+        width: 50%;
+    }
+}

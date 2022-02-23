@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--                                header section of the page                                       -->
+    <header>
+        <h1>Background-Color Changer</h1>
+    </header>
+
+    <!--                               main section of the page                                        -->
+    <main>
+        <section>
+           <div class="bg_color">
+            <p>Background-Color: <span id="colorValue" >white</span></p>
+           </div>
+           <div class="colorchanger">
+            <button type="submit" id="btn" role="button">Change</button>
+           </div>
+        </section>
+
+        <section id="color_manipulation">
+            <div class="color_add">
+                <form  onsubmit="return false" role="form">
+                    <label for="colorinput">Your favourite color: <input type="text" name="colorinput" id="color" placeholder="yellow" required></label>
+                    <button type="submit" id="add" class="addbtn" role="button">ADD</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+        <!--                                footer                                             -->
+
+        <footer id="footer">
+            <div class="copyright_container">
+                <p>&copy; Copyright <span id="year"></span></p>
+            </div>
+            <div class="author">
+                <p>Designed and developed by Sahil</p>
+            </div>
+        </footer>
+    <script src="./js/Index.js"></script>
+</body>
+</html>
