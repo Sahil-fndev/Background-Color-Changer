@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Background-Color Changer</title>
 </head>
@@ -16,7 +16,7 @@
 
     <!--                               main section of the page                                        -->
     <main>
-        <section>
+        <section class="color_changer">
            <div class="bg_color">
             <p>Background-Color: <span id="colorValue" >white</span></p>
            </div>
@@ -26,9 +26,9 @@
         </section>
 
         <section id="color_manipulation">
-            <div class="color_add">
+            <div id="color_add">
                 <form  onsubmit="return false" role="form">
-                    <label for="colorinput">Your favourite color: <input type="text" name="colorinput" id="color" placeholder="yellow" required></label>
+                    <label for="colorinput" id="colorinput">Your favourite color: <input type="text" name="colorinput" id="color" placeholder="yellow" required></label>
                     <button type="submit" id="add" class="addbtn" role="button">ADD</button>
                 </form>
             </div>
@@ -45,6 +45,6 @@
                 <p>Designed and developed by Sahil</p>
             </div>
         </footer>
-    <script src="./js/Index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
