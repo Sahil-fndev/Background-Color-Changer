@@ -99,7 +99,8 @@ input[type ='text'] {
 }
 
 /*            footer                         */
-footer {
+#footer {
+
     text-align: center;
     font-size: var(--footer-font-size);
     font-weight: 600;
@@ -136,5 +137,10 @@ footer {
         margin-top: calc(2% + 0.2em);
         grid-area: button;
         width: 80%;
+    }
+
+    #footer {
+        position: fixed;
+        bottom:  0;
     }
 }
